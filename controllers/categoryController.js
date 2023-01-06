@@ -20,7 +20,7 @@ exports.categoryDetail = (req, res, next) => {
     if (data == null) {
       next(new Error("Category does not exist"));
     } else {
-      Item.find({ category: data[0]._id })
+      Item.find({ category: data._id })
         .populate("category")
         .exec((err, data) => {
           if (err) {

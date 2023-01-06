@@ -15,4 +15,12 @@ ItemSchema.virtual("url").get(function () {
   return `/${this.category.name}/${this._id}`;
 });
 
+ItemSchema.virtual("relativePrice").get(function () {
+  return Math.round((this.price / this.weight.quantity) * 100) / 100;
+});
+
+ItemSchema.virtual("relativeUnit").get(function () {
+  return `€ / ${this.weight.unit}`;
+});
+
 module.exports = mongoose.model("Item", ItemSchema);

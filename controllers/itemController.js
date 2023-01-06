@@ -1,7 +1,16 @@
 let express = require("express");
 
+const Item = require("../models/Item");
+
 exports.itemDetail = (req, res, next) => {
-  res.render("item", { title: req.params.category + " " + req.params.id });
+  Item.findOne({ _id: req.params.id })
+    .populate("category")
+    .exec((err, data) => {
+      if (err) {
+        return next(err);
+      }
+      res.render("item", { item: data });
+    });
 };
 
 exports.itemCreateGet = (req, res, next) => {

@@ -1,4 +1,13 @@
 extends layout
 
 block content
-  h2= title
+  h2= item.name 
+  p= "Description: " + item.description
+  p= "Category: " + item.category.name
+  p= "Price: " + item.price + " €"
+    if item.weight.unit == "Kg"
+      p="Weight: " + item.weight.quantity + " Kg" + " ( " + item.relativePrice + item.relativeUnit + " )"
+    else if item.weight.unit == "Litre"
+      p="Litres: " + item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
+    else if item.weight.unit == "Unit"
+      p="Units: " + item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
