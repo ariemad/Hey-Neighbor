@@ -75,7 +75,7 @@ function itemCreate(
     }
     console.log("New Item: " + item);
     items.push(item);
-    // cb(null, item);
+    cb(null, item);
   });
 }
 
@@ -140,7 +140,8 @@ function createItemsMeat(cb) {
           categories[0],
           4,
           0.4,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -150,7 +151,8 @@ function createItemsMeat(cb) {
           categories[0],
           2.5,
           0.5,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -160,7 +162,8 @@ function createItemsMeat(cb) {
           categories[0],
           2,
           0.25,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -170,7 +173,8 @@ function createItemsMeat(cb) {
           categories[0],
           5,
           0.5,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -180,7 +184,8 @@ function createItemsMeat(cb) {
           categories[0],
           5,
           0.7,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -190,7 +195,8 @@ function createItemsMeat(cb) {
           categories[0],
           2,
           0.45,
-          "Kg"
+          "Kg",
+          callback
         );
       },
     ],
@@ -208,7 +214,8 @@ function createItemsFish(cb) {
           categories[1],
           5,
           0.25,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -218,7 +225,8 @@ function createItemsFish(cb) {
           categories[1],
           3.5,
           0.4,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -228,7 +236,8 @@ function createItemsFish(cb) {
           categories[1],
           10,
           0.2,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -238,7 +247,8 @@ function createItemsFish(cb) {
           categories[1],
           3,
           0.5,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -248,7 +258,8 @@ function createItemsFish(cb) {
           categories[1],
           7,
           0.15,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -258,7 +269,8 @@ function createItemsFish(cb) {
           categories[1],
           3.75,
           0.255,
-          "Kg"
+          "Kg",
+          callback
         );
       },
     ],
@@ -276,7 +288,8 @@ function createItemsBakery(cb) {
           categories[2],
           1.1,
           1,
-          "Unit"
+          "Unit",
+          callback
         );
       },
       function (callback) {
@@ -286,7 +299,8 @@ function createItemsBakery(cb) {
           categories[2],
           7.5,
           1,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -296,7 +310,8 @@ function createItemsBakery(cb) {
           categories[2],
           2.4,
           0.8,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -306,7 +321,8 @@ function createItemsBakery(cb) {
           categories[2],
           2.7,
           1,
-          "Unit"
+          "Unit",
+          callback
         );
       },
       function (callback) {
@@ -316,7 +332,8 @@ function createItemsBakery(cb) {
           categories[2],
           0.5,
           1,
-          "Unit"
+          "Unit",
+          callback
         );
       },
       function (callback) {
@@ -326,7 +343,8 @@ function createItemsBakery(cb) {
           categories[2],
           0.6,
           1,
-          "Unit"
+          "Unit",
+          callback
         );
       },
     ],
@@ -344,7 +362,8 @@ function createItemsWater(cb) {
           categories[3],
           4,
           9,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -354,7 +373,8 @@ function createItemsWater(cb) {
           categories[3],
           2,
           5,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -364,7 +384,8 @@ function createItemsWater(cb) {
           categories[3],
           3,
           1.8,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -374,7 +395,8 @@ function createItemsWater(cb) {
           categories[3],
           2.5,
           1,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -384,7 +406,8 @@ function createItemsWater(cb) {
           categories[3],
           3,
           1.35,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -394,7 +417,8 @@ function createItemsWater(cb) {
           categories[3],
           2.5,
           1.8,
-          "Litre"
+          "Litre",
+          callback
         );
       },
     ],
@@ -412,7 +436,8 @@ function createItemsWine(cb) {
           categories[4],
           10,
           0.75,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -422,7 +447,8 @@ function createItemsWine(cb) {
           categories[4],
           9,
           0.75,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -432,7 +458,8 @@ function createItemsWine(cb) {
           categories[4],
           5,
           0.75,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -442,7 +469,8 @@ function createItemsWine(cb) {
           categories[4],
           3,
           1,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -452,7 +480,8 @@ function createItemsWine(cb) {
           categories[4],
           5,
           0.75,
-          "Litre"
+          "Litre",
+          callback
         );
       },
       function (callback) {
@@ -462,7 +491,8 @@ function createItemsWine(cb) {
           categories[4],
           4,
           0.75,
-          "Litre"
+          "Litre",
+          callback
         );
       },
     ],
@@ -480,7 +510,8 @@ function createItemsVegetables(cb) {
           categories[5],
           4,
           1,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -490,7 +521,8 @@ function createItemsVegetables(cb) {
           categories[5],
           0.95,
           1,
-          "Unit"
+          "Unit",
+          callback
         );
       },
       function (callback) {
@@ -500,7 +532,8 @@ function createItemsVegetables(cb) {
           categories[5],
           1.19,
           0.5,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -510,7 +543,8 @@ function createItemsVegetables(cb) {
           categories[5],
           0.8,
           1,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -520,7 +554,8 @@ function createItemsVegetables(cb) {
           categories[5],
           2.3,
           2,
-          "Kg"
+          "Kg",
+          callback
         );
       },
       function (callback) {
@@ -530,7 +565,8 @@ function createItemsVegetables(cb) {
           categories[5],
           0.15,
           1,
-          "Kg"
+          "Kg",
+          callback
         );
       },
     ],
@@ -554,9 +590,11 @@ async.series(
     if (err) {
       console.log("FINAL ERR: " + err);
     } else {
-      console.log("Result: " + error);
+      console.log("Result: " + results);
     }
-    // All done, disconnect from database
-    mongoose.connection.close();
+
+    mongoose.connection.close(() => {
+      console.log("MongoDB connection closed");
+    });
   }
 );
