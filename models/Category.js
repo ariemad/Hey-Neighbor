@@ -8,7 +8,7 @@ const CategorySchema = new Schema({
 });
 
 CategorySchema.virtual("url").get(function () {
-  return `/${this.name}`;
+  return `/${this.name.replaceAll(" ", "-")}`;
 });
 
 module.exports = mongoose.model("Category", CategorySchema);

@@ -2,3 +2,7 @@ extends layout
 
 block content
   h2= title
+  ul
+    for item in items
+      li 
+        a(href = item.url)= item.name

@@ -80,7 +80,7 @@ function itemCreate(
 }
 
 function createCategories(cb) {
-  async.parallel(
+  async.series(
     [
       function (callback) {
         categoryCreate(
