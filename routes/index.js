@@ -17,10 +17,6 @@ const {
 
 /* GET home page. */
 
-router.get("/:category/:id/create", itemCreateGet);
-
-router.post("/:category/:id/create", itemCreatePost);
-
 router.get("/:category/:id/delete", itemDeleteGet);
 
 router.post("/:category/:id/delete", itemDeletePost);
@@ -30,6 +26,10 @@ router.get("/:category/:id/update", itemUpdateGet);
 router.post("/:category/:id/update", itemUpdatePost);
 
 router.get("/:category/:id", itemDetail);
+
+router.get("/create", itemCreateGet);
+
+router.post("/create", itemCreatePost);
 
 router.get("/:category/", categoryDetail);
 

@@ -1,9 +1,9 @@
 let express = require("express");
 
 exports.categoryCatalog = (req, res, next) => {
-  res.send("Under construction: Catalog");
+  res.render("index");
 };
 
 exports.categoryDetail = (req, res, next) => {
-  res.send("Under construction: Categories " + req.params.category);
+  res.render("category", { title: req.params.category });
 };
