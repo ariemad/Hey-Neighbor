@@ -9,7 +9,7 @@ exports.itemDetail = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      res.render("item", { item: data });
+      res.render("itemDetail", { item: data });
     });
 };
 
@@ -22,18 +22,30 @@ exports.itemCreatePost = (req, res, next) => {
 };
 
 exports.itemDeleteGet = (req, res, next) => {
-  res.render("itemDelete", {
-    title: `Delete: ${req.params.category} ${req.params.id}`,
-  });
+  Item.findOne({ _id: req.params.id })
+    .populate("category")
+    .exec((err, data) => {
+      if (err) {
+        return next(err);
+      }
+      res.render("itemDelete", { item: data });
+    });
 };
 
 exports.itemDeletePost = (req, res, next) => {
-  res.send(
-    "Under construction: Delete Post " +
-      req.params.category +
-      " " +
-      req.params.id
-  );
+  Item.findOne({ _id: req.params.id })
+    .populate("category")
+    .exec((err, data1) => {
+      if (err) {
+        return next(err);
+      }
+      Item.findByIdAndRemove({ _id: data1._id }, (err, data2) => {
+        if (err) {
+          return next(err);
+        }
+        res.redirect(`/${data1.category.name}`);
+      });
+    });
 };
 
 exports.itemUpdateGet = (req, res, next) => {

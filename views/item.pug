@@ -1,5 +1,6 @@
 extends layout
 
+
 block content
   h2= item.name 
   p= "Description: " + item.description
@@ -11,3 +12,5 @@ block content
       p="Litres: " + item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
     else if item.weight.unit == "Unit"
       p="Units: " + item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
+  block itemDetail
+
