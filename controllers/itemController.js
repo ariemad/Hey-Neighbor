@@ -1,5 +1,7 @@
 let express = require("express");
+let async = require("async");
 
+const Category = require("../models/Category");
 const Item = require("../models/Item");
 
 exports.itemDetail = (req, res, next) => {
@@ -14,11 +16,46 @@ exports.itemDetail = (req, res, next) => {
 };
 
 exports.itemCreateGet = (req, res, next) => {
-  res.render("itemCreate");
+  async.parallel(
+    {
+      unitsDocuments(cb) {
+        Item.aggregate([
+          {
+            $group: {
+              _id: "$weight.unit",
+            },
+          },
+        ]).exec(cb);
+      },
+      categoriesDocuments(cb) {
+        Category.find({}).exec(cb);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      let units = [];
+      for (const document of results.unitsDocuments) {
+        units.push(document._id);
+      }
+      units = units.sort();
+
+      let categories = [];
+      for (const document of results.categoriesDocuments) {
+        categories.push(document.name);
+      }
+      categories = categories.sort();
+      res.render("itemCreate", {
+        units: units,
+        categories: categories,
+      });
+    }
+  );
 };
 
 exports.itemCreatePost = (req, res, next) => {
-  res.send("Under construction: Item Create Post ");
+  res.send(req.params + "itemCreatePost");
 };
 
 exports.itemDeleteGet = (req, res, next) => {

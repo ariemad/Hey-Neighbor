@@ -12,4 +12,18 @@ block content
     div
       label(for= "price") Price
       input(type="text" name = "price")
+    div
+      p Category
+      each val in categories
+          label(for= "category")= val
+          input(type= "radio" name= "category" value =val)
+    div
+      p Unit
+      each val in units
+          label(for= "unit")= val
+          input(type= "radio" name= "unit" value =val)
+    div
+      label(for= "quantity") Quantity
+      input(type="text" name = "quantity")
+    button(type="submit") Create New Item
 
