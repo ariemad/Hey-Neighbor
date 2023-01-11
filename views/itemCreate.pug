@@ -26,4 +26,8 @@ block content
       label(for= "quantity") Quantity
       input(type="text" name = "quantity")
     button(type="submit") Create New Item
+    if err
+      each error in err
+        p= error.msg
+  
 
