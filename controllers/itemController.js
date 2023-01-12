@@ -1,6 +1,5 @@
 let async = require("async");
 const { body, validationResult, check } = require("express-validator");
-const { response } = require("../app");
 
 const Category = require("../models/Category");
 const Item = require("../models/Item");
@@ -47,7 +46,7 @@ exports.itemCreateGet = (req, res, next) => {
         categories.push(document.name);
       }
       categories = categories.sort();
-      res.render("itemCreate", {
+      res.render("itemCreateUpdate", {
         units: units,
         categories: categories,
         err: req.body.err,
@@ -170,9 +169,48 @@ exports.itemDeletePost = (req, res, next) => {
 };
 
 exports.itemUpdateGet = (req, res, next) => {
-  res.render("itemUpdate", {
-    title: `Update: ${req.params.category} ${req.params.id}`,
-  });
+  async.parallel(
+    {
+      unitsDocuments(cb) {
+        Item.aggregate([
+          {
+            $group: {
+              _id: "$weight.unit",
+            },
+          },
+        ]).exec(cb);
+      },
+      categoriesDocuments(cb) {
+        Category.find({}).exec(cb);
+      },
+      item(cb) {
+        Item.findOne({ _id: req.params.id }).populate("category").exec(cb);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      let units = [];
+      for (const document of results.unitsDocuments) {
+        units.push(document._id);
+      }
+      units = units.sort();
+
+      let categories = [];
+      for (const document of results.categoriesDocuments) {
+        categories.push(document.name);
+      }
+      categories = categories.sort();
+      console.log(results.item);
+      res.render("itemCreateUpdate", {
+        units: units,
+        categories: categories,
+        err: req.body.err,
+        item: results.item,
+      });
+    }
+  );
 };
 
 exports.itemUpdatePost = (req, res, next) => {
