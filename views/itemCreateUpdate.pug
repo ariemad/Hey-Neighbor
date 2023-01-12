@@ -43,7 +43,7 @@ block content
           input(type= "radio" name= "unit" value =val)
     div
       label(for= "quantity") Quantity
-      input(type="text" name = "quantity" value = updating ? item.quantity : '')
+      input(type="text" name = "quantity" value = updating ? item.weight.quantity : '')
     button(type="submit") Create New Item
     if err
       each error in err

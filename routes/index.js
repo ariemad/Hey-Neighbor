@@ -14,6 +14,7 @@ const {
   itemUpdateGet,
   itemUpdatePost,
 } = require("../controllers/itemController");
+const { validateItem } = require("../middleware/validation");
 
 /* GET home page. */
 
@@ -23,13 +24,13 @@ router.post("/:category/:id/delete", itemDeletePost);
 
 router.get("/:category/:id/update", itemUpdateGet);
 
-router.post("/:category/:id/update", itemUpdatePost);
+router.post("/:category/:id/update", validateItem, itemUpdatePost);
 
 router.get("/:category/:id", itemDetail);
 
 router.get("/create", itemCreateGet);
 
-router.post("/create", itemCreatePost);
+router.post("/create", validateItem, itemCreatePost);
 
 router.get("/:category/", categoryDetail);
 
