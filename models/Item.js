@@ -9,6 +9,7 @@ const ItemSchema = new Schema({
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   price: Number,
   weight: { quantity: Number, unit: String },
+  imageLocation: String,
 });
 
 ItemSchema.virtual("url").get(function () {

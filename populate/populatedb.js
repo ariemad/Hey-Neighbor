@@ -18,10 +18,11 @@ if (!userArgs[0].startsWith("mongodb")) {
 }
 
 var async = require("async");
-var Category = require("./models/Category");
-var Item = require("./models/Item");
+var Category = require("../models/Category");
+var Item = require("../models/Item");
 
 var mongoose = require("mongoose");
+const { createPlaceHolderImage } = require("./createPlaceHolderImage");
 var mongoDB = userArgs[0];
 
 mongoose.set("strictQuery", false);
@@ -32,6 +33,10 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 let categories = [];
 let items = [];
+
+let imagePlaceholder = "./e66f025d-470c-4aa4-83a9-b557bd7a4115.jpg";
+let pathToPublic = "../public/";
+let pathAfterPublic = "./images/";
 
 function categoryCreate(name, description, cb) {
   let categoryDetail = { name: name, description: description };
@@ -58,12 +63,19 @@ function itemCreate(
   weightUnit,
   cb
 ) {
+  let imageLocation = createPlaceHolderImage(
+    imagePlaceholder,
+    pathToPublic,
+    pathAfterPublic
+  );
+
   let itemDetail = {
     name: name,
     description: description,
     category: category,
     price: price,
     weight: { quantity: weightQuantity, unit: weightUnit },
+    imageLocation: imageLocation,
   };
 
   let item = new Item(itemDetail);
