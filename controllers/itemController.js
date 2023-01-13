@@ -1,5 +1,6 @@
 let async = require("async");
 const { body, validationResult, check } = require("express-validator");
+const fs = require("fs");
 
 const Category = require("../models/Category");
 const Item = require("../models/Item");
@@ -138,6 +139,11 @@ exports.itemDeletePost = (req, res, next) => {
         if (err) {
           return next(err);
         }
+        fs.unlink("./public" + data1.imageLocation, (err) => {
+          if (err) {
+            throw err;
+          }
+        });
         res.redirect(`/${data1.category.name}`);
       });
     });
