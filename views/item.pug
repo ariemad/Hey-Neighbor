@@ -12,7 +12,7 @@ block content
       p="Litres: " + item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
     else if item.weight.unit == "Unit"
       p="Units: " + item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
-  div
-    img(src=item.imageLocation)
+  div.image-container
+    img.item-image(src=item.imageLocation)
   block itemDetail
 
