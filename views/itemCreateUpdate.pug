@@ -46,10 +46,10 @@ block content
       input(type="text" name = "quantity" value = updating ? item.weight.quantity : '')
     div.image-container
       img.item-image#image-preview(src= updating ? item.imageLocation : '' alt= "Image Preview")
-    input#imageInput(type= 'file' name = "image" accept=".png,.jpg")
-    button(type="submit") Create New Item
+    input#image-input(type= 'file' name = "image" accept=".png,.jpg")
+    input(type="submit" value= 'Create New Item') 
   if err
     each error in err
       p= error.msg
   
-  script(src= "./javascripts/imagePreview.js")
+  script(src= "/javascripts/imagePreview.js")

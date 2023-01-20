@@ -24,13 +24,13 @@ router.post("/:category/:id/delete", itemDeletePost);
 
 router.get("/:category/:id/update", itemUpdateGet);
 
-router.post("/:category/:id/update", validateItem, itemUpdatePost);
+router.post("/:category/:id/update", itemUpdatePost);
 
 router.get("/:category/:id", itemDetail);
 
 router.get("/create", itemCreateGet);
 
-router.post("/create", validateItem, itemCreatePost);
+router.post("/create", itemCreatePost);
 
 router.get("/:category/", categoryDetail);
 

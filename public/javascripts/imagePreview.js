@@ -1,11 +1,12 @@
-console.log("Image Preview");
+function updateImage() {
+  var input = document.getElementById("image-input");
+  var image = document.getElementById("image-preview");
+  if (input.value) {
+    image.src = URL.createObjectURL(input.files[0]);
+  } else {
+    image.src = "";
+  }
+}
 
-const imageInput = document.getElementById("imageInput");
-imageInput.addEventListener("change", function () {
-  const reader = new FileReader();
-  reader.onload = function () {
-    const preview = document.getElementById("image-preview");
-    preview.src = reader.result;
-  };
-  reader.readAsDataURL(imageInput.files[0]);
-});
+let inputButton = document.getElementById("image-input");
+inputButton.addEventListener("change", updateImage);

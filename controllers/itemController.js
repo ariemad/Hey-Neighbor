@@ -10,6 +10,7 @@ const Item = require("../models/Item");
 // TODO: Split file naming to own module.
 
 const multer = require("multer");
+const { validateItem } = require("../middleware/validation");
 
 let multer_counter = 0;
 const storage = multer.diskStorage({
@@ -17,7 +18,6 @@ const storage = multer.diskStorage({
     cb(null, "./public/images");
   },
   filename: function (req, file, cb) {
-    console.log(file);
     cb(null, Date.now() + multer_counter + path.extname(file.originalname));
     multer_counter++;
   },
@@ -80,14 +80,14 @@ exports.itemCreateGet = (req, res, next) => {
 
 exports.itemCreatePost = [
   upload.single("image"),
+  validateItem,
   (req, res, next) => {
     //Validation handling
-
-    console.log(req.body);
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       req.body.err = errors.errors;
+      console.log(req.body);
       return this.itemCreateGet(req, res, next);
     }
     let item = {
@@ -99,8 +99,8 @@ exports.itemCreatePost = [
         unit: req.body.unit,
         quantity: req.body.quantity,
       },
+      imageLocation: `/images/${req.file.filename}`,
     };
-    console.log(item);
     async.parallel(
       {
         unitsDocuments(cb) {
@@ -133,9 +133,6 @@ exports.itemCreatePost = [
         if (!possibleUnits.find((document) => document == item.weight.unit)) {
           next("Unit does't exist");
         }
-        console.log(results.categoriesDocuments);
-        console.log(item.category);
-
         item.category = results.categoriesDocuments.find(
           (document) => document.name == item.category
         )._id;
@@ -225,6 +222,8 @@ exports.itemUpdateGet = (req, res, next) => {
 };
 
 exports.itemUpdatePost = [
+  upload.single("image"),
+  validateItem,
   (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
