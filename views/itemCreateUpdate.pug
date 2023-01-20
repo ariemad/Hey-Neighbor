@@ -4,8 +4,8 @@ extends layout
 block content
   -var updating = item ? true : false
 
-  h2= "Create Item"
-  form(method="POST" action= "")
+  h2= updating? 'Update Item' : "Create Item"
+  form(method='POST' action='' enctype="multipart/form-data")
     div
       label(for= "name") Item Name
       input(type="text" name = "name" value = updating ? item.name : '')
@@ -45,11 +45,11 @@ block content
       label(for= "quantity") Quantity
       input(type="text" name = "quantity" value = updating ? item.weight.quantity : '')
     div.image-container
-      img.item-image#image-preview(src= "" alt= "Image Preview")
+      img.item-image#image-preview(src= updating ? item.imageLocation : '' alt= "Image Preview")
     input#imageInput(type= 'file' name = "image" accept=".png,.jpg")
     button(type="submit") Create New Item
-    if err
-      each error in err
-        p= error.msg
+  if err
+    each error in err
+      p= error.msg
   
   script(src= "./javascripts/imagePreview.js")

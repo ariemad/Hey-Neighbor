@@ -1,9 +1,31 @@
 let async = require("async");
 const { body, validationResult, check } = require("express-validator");
 const fs = require("fs");
+const path = require("path");
 
 const Category = require("../models/Category");
 const Item = require("../models/Item");
+
+// MULTER
+// TODO: Split file naming to own module.
+
+const multer = require("multer");
+
+let multer_counter = 0;
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images");
+  },
+  filename: function (req, file, cb) {
+    console.log(file);
+    cb(null, Date.now() + multer_counter + path.extname(file.originalname));
+    multer_counter++;
+  },
+});
+
+const upload = multer({ storage: storage });
+
+//CONTROLLERS
 
 exports.itemDetail = (req, res, next) => {
   Item.findOne({ _id: req.params.id })
@@ -57,7 +79,12 @@ exports.itemCreateGet = (req, res, next) => {
 };
 
 exports.itemCreatePost = [
+  upload.single("image"),
   (req, res, next) => {
+    //Validation handling
+
+    console.log(req.body);
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       req.body.err = errors.errors;
@@ -73,6 +100,7 @@ exports.itemCreatePost = [
         quantity: req.body.quantity,
       },
     };
+    console.log(item);
     async.parallel(
       {
         unitsDocuments(cb) {
@@ -105,6 +133,9 @@ exports.itemCreatePost = [
         if (!possibleUnits.find((document) => document == item.weight.unit)) {
           next("Unit does't exist");
         }
+        console.log(results.categoriesDocuments);
+        console.log(item.category);
+
         item.category = results.categoriesDocuments.find(
           (document) => document.name == item.category
         )._id;
