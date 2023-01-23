@@ -26,8 +26,9 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-const repopulateDB = async () => {
+const repopulate = async () => {
   // Depopulate
+  // Deletes all files in public/images
 
   let folder = "../public/images";
   fs.readdir(folder, (err, files) => {
@@ -43,7 +44,7 @@ const repopulateDB = async () => {
   await db.dropCollection("categories");
   await db.dropCollection("items");
 
-  // Populate
+  // PopulateDB
 
   exec(`./populatedb.js ${mongoDB}`, (error, stdout, stderr) => {
     if (error) {
@@ -53,6 +54,17 @@ const repopulateDB = async () => {
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
   });
+
+  // Other Assets
+
+  fs.readFile("./logo_200x200.png", (err, data) => {
+    if (err) throw err;
+
+    // write the contents to the new file
+    fs.writeFile("../public/images/logo_200x200.png", data, (err) => {
+      if (err) throw err;
+    });
+  });
 };
 
-repopulateDB();
+repopulate();
