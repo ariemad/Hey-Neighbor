@@ -1,10 +1,52 @@
+/* 
+BackGround Color: #ffe3e3 Red1
+
+Grey: #495057
+
+ */
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 120px;
+  background-color: #ffe3e3;
+}
+
+.header-wrapper {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+nav {
+  flex: auto;
+  background-color: #ffe3e3;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  font-size: 3.2rem;
+  font-weight: 500;
 }
 
 a {
-  color: #00b7ff;
+  color: #495057;
+  text-decoration: none;
+}
+
+a:hover {
 }
 
 .image-container {

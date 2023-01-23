@@ -3,13 +3,11 @@ const async = require("async");
 const Category = require("../models/Category");
 const Item = require("../models/Item");
 
-exports.categoryCatalog = (req, res, next) => {
-  Category.find({}, { name: 1 }, (err, data) => {
-    if (err) {
-      return next(err);
-    }
-    res.render("index", { categories: data });
-  });
+exports.categoryCatalog = async (req, res, next) => {
+  let data = await Category.find({})
+    .sort({ name: 1 })
+    .catch((err) => next(err));
+  res.render("index", { categories: data });
 };
 
 exports.categoryDetail = (req, res, next) => {
