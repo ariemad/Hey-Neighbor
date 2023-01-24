@@ -13,6 +13,7 @@ var mongoDB = userArgs[0];
 
 const { exec } = require("child_process");
 const fs = require("fs");
+const path = require("path");
 
 //MongoDB connection
 
@@ -57,12 +58,19 @@ const repopulate = async () => {
 
   // Other Assets
 
-  fs.readFile("./logo_200x200.png", (err, data) => {
+  const sourceFolder = "./assets";
+  const destinationFolder = "../public/images";
+  fs.readdir(sourceFolder, (err, files) => {
     if (err) throw err;
 
-    // write the contents to the new file
-    fs.writeFile("../public/images/logo_200x200.png", data, (err) => {
-      if (err) throw err;
+    files.forEach((file) => {
+      const sourceFile = path.join(sourceFolder, file);
+      const destinationFile = path.join(destinationFolder, file);
+
+      fs.copyFile(sourceFile, destinationFile, (err) => {
+        if (err) throw err;
+        console.log(`Copied ${file} to ${destinationFolder}`);
+      });
     });
   });
 };

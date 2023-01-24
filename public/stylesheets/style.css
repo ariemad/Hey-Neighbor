@@ -3,18 +3,26 @@ BackGround Color: #ffe3e3 Red1
 
 Grey: #495057
 
- */
+*/
 
 html {
   font-size: 62.5%;
+  color: #495057;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  color: #495057;
+}
+
+/****************************************************************************/
+/* HEADER */
+
 header {
-  height: 120px;
+  height: 12rem;
   background-color: #ffe3e3;
 }
 
@@ -36,18 +44,63 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
 
-  font-size: 3.2rem;
+nav a {
+  font-size: 2.4rem;
   font-weight: 500;
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  color: red;
 }
 
 a {
-  color: #495057;
   text-decoration: none;
 }
 
-a:hover {
+/****************************************************************************/
+/* FOOTER */
+
+footer {
+  background-color: #ffe3e3;
+
+  font-size: 1.6rem;
 }
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15rem 3rem;
+  padding: 4rem 0 1rem 0;
+}
+
+.footer-logos {
+}
+.footer-about-us {
+}
+.footer-information {
+}
+.footer-other {
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center;
+
+  font-size: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logos {
+  width: 5rem;
+}
+
+/****************************************************************************/
+/* IMAGE DISPLAY */
 
 .image-container {
   width: 500px;
