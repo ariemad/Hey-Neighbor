@@ -18,15 +18,15 @@ const { validateItem } = require("../middleware/validation");
 
 /* GET home page. */
 
-router.get("/:category/:id/delete", itemDeleteGet);
+router.get("/item/:id/delete", itemDeleteGet);
 
-router.post("/:category/:id/delete", itemDeletePost);
+router.post("/item/:id/delete", itemDeletePost);
 
-router.get("/:category/:id/update", itemUpdateGet);
+router.get("/item/:id/update", itemUpdateGet);
 
-router.post("/:category/:id/update", itemUpdatePost);
+router.post("/item/:id/update", itemUpdatePost);
 
-router.get("/:category/:id", itemDetail);
+router.get("/item/:id", itemDetail);
 
 router.get("/create", itemCreateGet);
 

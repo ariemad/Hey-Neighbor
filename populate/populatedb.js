@@ -39,7 +39,17 @@ let pathToPublic = "../public/";
 let pathAfterPublic = "./images/";
 
 function categoryCreate(name, description, cb) {
-  let categoryDetail = { name: name, description: description };
+  let imageLocation = createPlaceHolderImage(
+    imagePlaceholder,
+    pathToPublic,
+    pathAfterPublic
+  );
+
+  let categoryDetail = {
+    name: name,
+    description: description,
+    imageLocation: imageLocation,
+  };
 
   let category = new Category(categoryDetail);
 
