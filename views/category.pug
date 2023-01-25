@@ -1,8 +1,14 @@
 extends layout
 
 block content
-  h2= title
-  ul
+  div.items-container.container
+    h2.above-parent= title
     for item in items
-      li 
-        a(href = item.url)= item.name
+      div.item-card
+        a.parent-size(href = item.url)
+        div.item-image-container
+          img.item-image(src=item.imageLocation)
+        h3.item-name= item.name
+        div.price-tag
+          h3= `${item.price} €`
+          p= `(${item.relativePrice} ${item.relativeUnit})`

@@ -4,7 +4,7 @@ block content
   div.categories-container.container
     each category in categories
       div.category-card
-        a(href = category.url)
+        a.parent-size(href = category.url)
         img.item-image(src=category.imageLocation)
         div.category-card-title
           h3= category.name
