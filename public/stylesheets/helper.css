@@ -1,6 +1,19 @@
 .container {
   max-width: 1150px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.medium-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .parent-size {
@@ -15,4 +28,35 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, -6rem);
+}
+
+.button {
+  display: block;
+  background-color: #ffe3e395;
+  padding: 1rem 2rem;
+  margin: 1.6rem;
+  border-radius: 1rem;
+  border: 1px #495057 solid;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.bigger-p {
+  font-size: 2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.flex-align-top {
+  align-items: top !important;
+}
+
+.no-margin-top {
+  margin-top: 0;
 }

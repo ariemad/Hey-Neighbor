@@ -2,17 +2,37 @@ extends layout
 
 
 block content
-  h2= item.name 
-  p= "Description: " + item.description
-  p= "Category: " + item.category.name
-  p= "Price: " + item.price + " €"
-    if item.weight.unit == "Kg"
-      p="Weight: " + item.weight.quantity + " Kg" + " ( " + item.relativePrice + item.relativeUnit + " )"
-    else if item.weight.unit == "Litre"
-      p="Litres: " + item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
-    else if item.weight.unit == "Unit"
-      p="Units: " + item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
-  div.image-container
-    img.item-image(src=item.imageLocation)
-  block itemDetail
+  div.item.small-container
+    div.item-main
+      h2= item.name 
+      h3= "Description:"
+      
+      p.bigger-p= item.description
+      
+      
+      h3= "Category:"
+      
+      p.bigger-p=item.category.name
+      
+      
+      h3= 'Price:'
+      
+      p.bigger-p= item.price + " €"
+      
+      
+      if item.weight.unit == "Kg"
+        h3= 'Weight:'
+        
+        p.bigger-p= item.weight.quantity + " Kg" + " ( " + item.relativePrice + item.relativeUnit + " )"
+      else if item.weight.unit == "Litre"
+        h3= 'Litres:'
+        
+        p.bigger-p=item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
+      else if item.weight.unit == "Unit"
+        h3= 'Units:'
+        
+        p.bigger-p=item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
+    div.image-container.image-container--item 
+      img.item-image(src=item.imageLocation)
+      block itemDetail
 

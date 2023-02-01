@@ -1,5 +1,8 @@
 extends item 
 
 block itemDetail
-  a(href= item.url + "/delete") Delete
-  a(href= item.url + "/update") Update
+  div.delete-update
+    form(method= "GET" action=`${item.url}/delete`)
+      button.button(type=submit) Delete
+    form(method= "GET" action=`${item.url}/update`)
+      button.button(type=submit) Update

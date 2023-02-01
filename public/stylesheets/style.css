@@ -29,11 +29,14 @@ p {
 h2 {
   font-size: 4.2rem;
   font-weight: 400;
+  margin: 5rem 0 3rem;
+  text-align: center;
 }
 
 h3 {
   font-size: 2.4rem;
   font-weight: 500;
+  margin: 2rem 0 1rem;
 }
 
 h4 {
@@ -48,7 +51,6 @@ h4 {
 header {
   height: 12rem;
   background-color: #ffe3e3;
-  margin-bottom: 10rem;
 }
 
 .header-wrapper {
@@ -148,6 +150,7 @@ footer {
 .categories-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-top: 10rem;
 
   gap: 4rem 4rem;
 }
@@ -205,6 +208,7 @@ footer {
   background-color: #ffe3e3;
   border: 1px #495057 solid;
   border-radius: 2rem;
+  box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.5);
   position: relative;
 
   display: grid;
@@ -234,6 +238,70 @@ footer {
 }
 
 /****************************************************************************/
+/* ITEM */
+
+.item {
+  border: 1px #495057 solid;
+  background-color: #ffe3e395;
+  border-radius: 1rem;
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .image-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.image-container--item {
+  padding: 5rem 3rem 0 0;
+}
+
+.item-main {
+  padding-left: 3rem;
+  padding-bottom: 5rem;
+}
+
+.item-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/****************************************************************************/
+/* ITEM DELETE */
+
+.delete-update {
+  display: flex;
+}
+
+/****************************************************************************/
+/* ITEM UPDATE/CREATE */
+
+.categories-radio {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 0;
+}
+.units-radio {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem 0;
+}
+
+#description-input {
+  resize: none;
+  width: 100%;
+}
+
+/****************************************************************************/
 /* IMAGE DISPLAY */
 
 .image-container {
@@ -243,6 +311,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .item-image {

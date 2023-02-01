@@ -1,8 +1,8 @@
 extends layout
 
 block content
+  h2= title
   div.items-container.container
-    h2.above-parent= title
     for item in items
       div.item-card
         a.parent-size(href = item.url)

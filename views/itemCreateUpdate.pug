@@ -4,52 +4,63 @@ extends layout
 block content
   -var updating = item ? true : false
 
-  h2= updating? 'Update Item' : "Create Item"
   form(method='POST' action='' enctype="multipart/form-data")
-    div
-      label(for= "name") Item Name
-      input(type="text" name = "name" value = updating ? item.name : '')
-    div
-      label(for= "description") Description
-      input(type="text" name = "description" value = updating ? item.description : '')
-    div
-      label(for= "price") Price
-      input(type="text" name = "price" value = updating ? item.price : '')
-    div
-      p Category
-      each val in categories
-        if (updating)
-          if (item.category.name == val)
-            label(for= "category")= val
-            input(type= "radio" name= "category" value =val checked )
-          else
-            label(for= "category")= val
-            input(type= "radio" name= "category" value =val)          
-        else
-          label(for= "category")= val
-          input(type= "radio" name= "category" value =val)
-    div
-      p Unit
-      each val in units
-        if (updating)
-          if (item.weight.unit == val)
-            label(for= "unit")= val
-            input(type= "radio" name= "unit" value =val checked)
-          else
-            label(for= "unit")= val
-            input(type= "radio" name= "unit" value =val)          
-        else
-          label(for= "unit")= val
-          input(type= "radio" name= "unit" value =val)
-    div
-      label(for= "quantity") Quantity
-      input(type="text" name = "quantity" value = updating ? item.weight.quantity : '')
-    div.image-container
-      img.item-image#image-preview(src= updating ? item.imageLocation : '' alt= "Image Preview")
-    input#image-input(type= 'file' name = "image" accept=".png,.jpg")
-    input(type="submit" value= 'Create New Item') 
-  if err
-    each error in err
-      p= error.msg
+    div.item.small-container
+      div.item-main
+        h3= 'Name:' 
+        input.bigger-p(type="text" name = "name" value = updating ? item.name : '')
+        h3= 'Description:' 
+        textarea#description-input.bigger-p(type="text" name = "description" )= updating ? item.description : ''
+        h3= 'Price:' 
+        input.bigger-p(type="text" name = "price" value = updating ? item.price : '')
+        h3 Category
+        div.categories-radio
+          each val in categories
+            if (updating)
+              if (item.category.name == val)
+                div.flex
+                  input(type= "radio" name= "category" value =val checked )
+                  label.bigger-p(for= "category")= val
+              else
+                div.flex
+                  input(type= "radio" name= "category" value =val)          
+                  label.bigger-p(for= "category")= val
+            else
+              div.flex
+                input(type= "radio" name= "category" value =val)
+                label.bigger-p(for= "category")= val
+        h3 Unit
+        div.units-radio
+          each val in units
+            if (updating)
+              if (item.weight.unit == val)
+                div.flex
+                  input(type= "radio" name= "unit" value =val checked)
+                  label.bigger-p(for= "unit")= val
+              else
+                div.flex
+                  input(type= "radio" name= "unit" value =val)          
+                  label.bigger-p(for= "unit")= val
+            else
+              div.flex
+                input(type= "radio" name= "unit" value =val)
+                label.bigger-p(for= "unit")= val
+        
+        h3(for= "quantity") Quantity
+        input.bigger-p(type="text" name = "quantity" value = updating ? item.weight.quantity : '')
+        if err
+          each error in err
+            p= error.msg
+      div.item-image
+        h2.no-margin-top= updating? 'Update Item' : "Create Item"
+        div.image-container
+          img.item-image#image-preview(src= updating ? item.imageLocation : '' alt= "Image Preview")
+        div
+          button#fileInputBtn.button(type = 'button') Choose image
+          input.button#image-input(type= 'file' name = "image" accept=".png,.jpg"  style="display:none;")
+          input.button(type="submit" value= updating? 'Update Item' : 'Create Item') 
+
   
   script(src= "/javascripts/imagePreview.js")
+  script(src= "/javascripts/fileInputButton.js")
+  script(src= "/javascripts/descriptionInput.js")
