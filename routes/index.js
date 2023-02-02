@@ -14,6 +14,7 @@ const {
   itemUpdateGet,
   itemUpdatePost,
 } = require("../controllers/itemController");
+const { getRandomItems } = require("../middleware/getRandomdItems");
 const { validateItem } = require("../middleware/validation");
 
 /* GET home page. */
@@ -26,7 +27,7 @@ router.get("/item/:id/update", itemUpdateGet);
 
 router.post("/item/:id/update", itemUpdatePost);
 
-router.get("/item/:id", itemDetail);
+router.get("/item/:id", getRandomItems, itemDetail);
 
 router.get("/create", itemCreateGet);
 
@@ -34,6 +35,6 @@ router.post("/create", itemCreatePost);
 
 router.get("/:category/", categoryDetail);
 
-router.get("/", categoryCatalog);
+router.get("/", getRandomItems, categoryCatalog);
 
 module.exports = router;

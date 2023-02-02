@@ -29,14 +29,13 @@ p {
 h2 {
   font-size: 4.2rem;
   font-weight: 400;
-  margin: 5rem 0 3rem;
+  margin: 6.4rem 0 3rem;
   text-align: center;
 }
 
 h3 {
   font-size: 2.4rem;
   font-weight: 500;
-  margin: 2rem 0 1rem;
 }
 
 h4 {
@@ -150,7 +149,6 @@ footer {
 .categories-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-top: 10rem;
 
   gap: 4rem 4rem;
 }
@@ -217,6 +215,7 @@ footer {
 
 .item-name {
   text-align: center;
+  margin: 0 0.4rem;
 }
 
 .item-image-container {
@@ -264,6 +263,10 @@ footer {
 .item-main {
   padding-left: 3rem;
   padding-bottom: 5rem;
+}
+
+.item-main h3 {
+  margin: 2rem 0 1rem;
 }
 
 .item-image {

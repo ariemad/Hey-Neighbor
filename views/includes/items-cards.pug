@@ -1,0 +1,10 @@
+div.items-container.container
+    for item in items
+      div.item-card
+        a.parent-size(href = item.url)
+        div.item-image-container
+          img.item-image(src=item.imageLocation)
+        h3.item-name= item.name
+        div.price-tag
+          h3= `${item.priceString} €`
+          p= `(${item.relativePrice} ${item.relativeUnit})`

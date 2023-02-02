@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  h2 Categories
   div.categories-container.container
     each category in categories
       div.category-card
@@ -8,3 +9,6 @@ block content
         img.item-image(src=category.imageLocation)
         div.category-card-title
           h3= category.name
+  
+  h2 Best Products
+  include includes/items-cards.pug 

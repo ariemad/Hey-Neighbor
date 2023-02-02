@@ -7,7 +7,9 @@ exports.categoryCatalog = async (req, res, next) => {
   let data = await Category.find({})
     .sort({ name: 1 })
     .catch((err) => next(err));
-  res.render("index", { categories: data });
+
+  console.log(req.body.samples);
+  res.render("index", { categories: data, items: req.body.samples });
 };
 
 exports.categoryDetail = async (req, res, next) => {
@@ -18,5 +20,8 @@ exports.categoryDetail = async (req, res, next) => {
   let listItems = await Item.find({ category: category._id }).catch((err) =>
     next(err)
   );
+  for (const sample of listItems) {
+    console.log(sample.relativePrice);
+  }
   res.render("category", { title: req.params.category, items: listItems });
 };

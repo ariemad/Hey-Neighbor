@@ -6,33 +6,25 @@ block content
     div.item-main
       h2= item.name 
       h3= "Description:"
-      
       p.bigger-p= item.description
-      
-      
       h3= "Category:"
-      
       p.bigger-p=item.category.name
-      
-      
       h3= 'Price:'
-      
-      p.bigger-p= item.price + " €"
-      
-      
+      p.bigger-p= item.priceString + " €"
+
       if item.weight.unit == "Kg"
         h3= 'Weight:'
-        
         p.bigger-p= item.weight.quantity + " Kg" + " ( " + item.relativePrice + item.relativeUnit + " )"
       else if item.weight.unit == "Litre"
         h3= 'Litres:'
-        
         p.bigger-p=item.weight.quantity + " Lt" + " ( " + item.relativePrice + item.relativeUnit + " )"
       else if item.weight.unit == "Unit"
         h3= 'Units:'
-        
         p.bigger-p=item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
+
     div.image-container.image-container--item 
       img.item-image(src=item.imageLocation)
       block itemDetail
+  h2 Best Products
+  include includes/items-cards.pug
 
