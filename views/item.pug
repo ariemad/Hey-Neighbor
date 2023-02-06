@@ -22,8 +22,9 @@ block content
         h3= 'Units:'
         p.bigger-p=item.weight.quantity + " ( " + item.relativePrice + item.relativeUnit + " )"
 
-    div.image-container.image-container--item 
-      img.item-image(src=item.imageLocation)
+    div
+      div.image-container.image-container--item 
+        img.item-image(src=item.imageLocation)
       block itemDetail
   h2 Best Products
   include includes/items-cards.pug

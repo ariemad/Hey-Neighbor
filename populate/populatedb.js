@@ -22,7 +22,7 @@ var Category = require("../models/Category");
 var Item = require("../models/Item");
 
 var mongoose = require("mongoose");
-const { createPlaceHolderImage } = require("./createPlaceHolderImage");
+const { createImage } = require("./createImage");
 var mongoDB = userArgs[0];
 
 mongoose.set("strictQuery", false);
@@ -34,15 +34,16 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 let categories = [];
 let items = [];
 
-let imagePlaceholder = "./e66f025d-470c-4aa4-83a9-b557bd7a4115.jpg";
+let imagePlaceholder = "./assets/item_categories/Placeholder.jpg";
 let pathToPublic = "../public/";
 let pathAfterPublic = "./images/";
 
 function categoryCreate(name, description, cb) {
-  let imageLocation = createPlaceHolderImage(
+  let imageLocation = createImage(
     imagePlaceholder,
     pathToPublic,
-    pathAfterPublic
+    pathAfterPublic,
+    name
   );
 
   let categoryDetail = {
@@ -73,10 +74,11 @@ function itemCreate(
   weightUnit,
   cb
 ) {
-  let imageLocation = createPlaceHolderImage(
+  let imageLocation = createImage(
     imagePlaceholder,
     pathToPublic,
-    pathAfterPublic
+    pathAfterPublic,
+    name
   );
 
   let itemDetail = {
@@ -578,7 +580,7 @@ function createItemsWater(cb) {
     [
       function (callback) {
         itemCreate(
-          "Water 6 x 1.5 Litre",
+          "Water 6 x 1,5 Litre",
           "Nisi ipsum aute non laborum consequat.",
           categories[3],
           4,
@@ -600,7 +602,7 @@ function createItemsWater(cb) {
       },
       function (callback) {
         itemCreate(
-          "Strawberry Flavoured Water 6 x 0.3 Litre",
+          "Strawberry Flavoured Water 6 x 0,3 Litre",
           "Nisi ipsum aute non laborum consequat.",
           categories[3],
           3,
@@ -633,7 +635,7 @@ function createItemsWater(cb) {
       },
       function (callback) {
         itemCreate(
-          "Soda 6 x 0.3",
+          "Soda 6 x 0,3",
           "Nisi ipsum aute non laborum consequat.",
           categories[3],
           2.5,
@@ -655,7 +657,7 @@ function createItemsWater(cb) {
       },
       function (callback) {
         itemCreate(
-          "Energy Drink 6 x 0.3",
+          "Energy Drink 6 x 0,3",
           "Nisi ipsum aute non laborum consequat.",
           categories[3],
           2.5,

@@ -1,20 +1,26 @@
 const fs = require("fs");
 const path = require("path");
+const { getImageName } = require("./getImageName");
 
 let counter = 0;
-exports.createPlaceHolderImage = (
-  originalFile,
+exports.createImage = (
+  placeholderFile,
   pathToPublic,
-  pathAfterPublic
+  pathAfterPublic,
+  name
 ) => {
+  //Search if there is a image with name, if not use placeholder
+  let imageFile = getImageName(name);
+  if (!imageFile) {
+    imageFile = placeholderFile;
+  }
   //File extension
-
-  const extension = path.extname(originalFile);
+  const extension = path.extname(imageFile);
 
   // create a timestamp
   const timestamp = new Date().getTime();
 
-  // This path will be used to copy the placeholder
+  // This path will be used to copy the image
   const newFile = path.join(
     pathToPublic,
     pathAfterPublic,
@@ -31,7 +37,7 @@ exports.createPlaceHolderImage = (
   counter++;
 
   // read the contents of the original file
-  fs.readFile(originalFile, (err, data) => {
+  fs.readFile(imageFile, (err, data) => {
     if (err) throw err;
 
     // write the contents to the new file

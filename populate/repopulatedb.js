@@ -18,7 +18,7 @@ const path = require("path");
 //MongoDB connection
 
 var mongoose = require("mongoose");
-const { createPlaceHolderImage } = require("./createPlaceHolderImage");
+const { createImage } = require("./createImage");
 var mongoDB = userArgs[0];
 
 mongoose.set("strictQuery", false);
@@ -58,7 +58,7 @@ const repopulate = async () => {
 
   // Other Assets
 
-  const sourceFolder = "./assets";
+  const sourceFolder = "./assets/logos";
   const destinationFolder = "../public/images";
   fs.readdir(sourceFolder, (err, files) => {
     if (err) throw err;
