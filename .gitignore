@@ -105,4 +105,4 @@ dist
 
 # For space saving
 
-public/images
+public/images/*
