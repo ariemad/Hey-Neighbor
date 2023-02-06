@@ -580,8 +580,8 @@ function createItemsWater(cb) {
     [
       function (callback) {
         itemCreate(
+          "Water 6 x 1,5 Litre",
           "Convenient and hydrating water, available in 6 x 1.5-liter bottles.",
-          "Nisi ipsum aute non laborum consequat.",
           categories[3],
           4,
           9,

@@ -87,7 +87,6 @@ exports.itemCreatePost = [
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       req.body.err = errors.errors;
-      console.log(req.body);
       return this.itemCreateGet(req, res, next);
     }
     let item = {
