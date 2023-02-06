@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-let folderPath = "./assets/item_categories";
+let folderPath = "./populate/assets/item_categories";
 
 exports.getImageName = (name) => {
   let files = fs.readdirSync(folderPath);

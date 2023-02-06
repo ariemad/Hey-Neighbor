@@ -1,5 +1,8 @@
 #! /usr/bin/env node
 
+require("dotenv").config();
+
+/* 
 var userArgs = process.argv.slice(2);
 
 if (!userArgs[0].startsWith("mongodb")) {
@@ -9,7 +12,7 @@ if (!userArgs[0].startsWith("mongodb")) {
   return;
 }
 
-var mongoDB = userArgs[0];
+var mongoDB = userArgs[0]; */
 
 const { exec } = require("child_process");
 const fs = require("fs");
@@ -19,10 +22,13 @@ const path = require("path");
 
 var mongoose = require("mongoose");
 const { createImage } = require("./createImage");
-var mongoDB = userArgs[0];
+/* var mongoDB = userArgs[0]; */
 
 mongoose.set("strictQuery", false);
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_KEY, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
@@ -31,7 +37,7 @@ const repopulate = async () => {
   // Depopulate
   // Deletes all files in public/images
 
-  let folder = "../public/images";
+  let folder = "./public/images";
   fs.readdir(folder, (err, files) => {
     if (err) throw err;
 
@@ -47,19 +53,22 @@ const repopulate = async () => {
 
   // PopulateDB
 
-  exec(`./populatedb.js ${mongoDB}`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error: ${error}`);
-      return;
+  exec(
+    `./populate/populatedb.js ${process.env.MONGO_KEY}`,
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      console.log(`stderr: ${stderr}`);
     }
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
-  });
+  );
 
   // Other Assets
 
-  const sourceFolder = "./assets/logos";
-  const destinationFolder = "../public/images";
+  const sourceFolder = "./populate/assets/logos";
+  const destinationFolder = "./public/images";
   fs.readdir(sourceFolder, (err, files) => {
     if (err) throw err;
 

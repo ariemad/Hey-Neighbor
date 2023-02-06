@@ -34,8 +34,8 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 let categories = [];
 let items = [];
 
-let imagePlaceholder = "./assets/item_categories/Placeholder.jpg";
-let pathToPublic = "../public/";
+let imagePlaceholder = "./populate/assets/item_categories/Placeholder.jpg";
+let pathToPublic = "./public/";
 let pathAfterPublic = "./images/";
 
 function categoryCreate(name, description, cb) {
