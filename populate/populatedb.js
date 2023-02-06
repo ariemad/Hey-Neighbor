@@ -160,7 +160,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "MeatBalls",
-          "Nisi ipsum aute non laborum consequat.",
+          "Tender and juicy meatballs made from beef and spices, perfect for pasta dishes or as a snack.",
           categories[0],
           4,
           0.4,
@@ -171,7 +171,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Boneless chicken Thighs",
-          "Nisi ipsum aute non laborum consequat.",
+          "Moist and flavorful boneless chicken thighs, perfect for grilling or stir-frying.",
           categories[0],
           2.5,
           0.5,
@@ -182,7 +182,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Beef Steak",
-          "Nisi ipsum aute non laborum consequat.",
+          "Juicy and rich beef steaks, ideal for grilling or pan-frying.",
           categories[0],
           2,
           0.25,
@@ -193,7 +193,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Pork Belly Slices",
-          "Nisi ipsum aute non laborum consequat.",
+          "Crispy and savory pork belly slices, great for roasting or grilling.",
           categories[0],
           5,
           0.5,
@@ -204,7 +204,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Pork Ribs",
-          "Nisi ipsum aute non laborum consequat.",
+          "Tender and succulent pork ribs, ideal for slow cooking or grilling.",
           categories[0],
           5,
           0.7,
@@ -215,7 +215,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Chicken Breasts",
-          "Nisi ipsum aute non laborum consequat.",
+          "Juicy and versatile chicken breasts, perfect for baking or grilling.",
           categories[0],
           2,
           0.45,
@@ -226,7 +226,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "German Style Salami",
-          "Nisi ipsum aute non laborum consequat.",
+          "Hearty and spicy German style salami, perfect for snacking or sandwiches.",
           categories[0],
           0.92,
           0.1,
@@ -237,7 +237,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Prosciutto with Herbs",
-          "Nisi ipsum aute non laborum consequat.",
+          "Aromatic prosciutto with herbs, great for antipasti or sandwiches.",
           categories[0],
           2.35,
           0.1,
@@ -248,7 +248,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Spanish Chorizo Ring",
-          "Nisi ipsum aute non laborum consequat.",
+          "Bold and smoky Spanish chorizo ring, ideal for cooking or snacking.",
           categories[0],
           2.5,
           0.1,
@@ -259,7 +259,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Finest Mortadella Slices",
-          "Nisi ipsum aute non laborum consequat.",
+          "Delicate and flavorful finest mortadella slices, perfect for sandwiches or charcuterie boards.",
           categories[0],
           2.35,
           0.1,
@@ -270,7 +270,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Serrano Ham",
-          "Nisi ipsum aute non laborum consequat.",
+          "Salt-cured and slightly spicy Serrano ham, ideal for antipasti or sandwiches.",
           categories[0],
           1.27,
           0.08,
@@ -281,7 +281,7 @@ function createItemsMeat(cb) {
       function (callback) {
         itemCreate(
           "Cheese and Serrano Rolls",
-          "Nisi ipsum aute non laborum consequat.",
+          "Cheesy and savory Serrano rolls, perfect for snacking or appetizers.",
           categories[0],
           2.65,
           0.09,
@@ -300,7 +300,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Salmon",
-          "Nisi ipsum aute non laborum consequat.",
+          "Rich and flavorful salmon, perfect for grilling or baking.",
           categories[1],
           5,
           0.25,
@@ -311,7 +311,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "5 Cod Fish Fillets",
-          "Nisi ipsum aute non laborum consequat.",
+          "Mild and delicate cod fish fillets, ideal for pan-frying or baking.",
           categories[1],
           3.5,
           0.4,
@@ -322,7 +322,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Lamprey",
-          "Nisi ipsum aute non laborum consequat.",
+          "Nutty and full-flavored lamprey, great for grilling or broiling.",
           categories[1],
           10,
           0.2,
@@ -333,7 +333,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "5 White Fish Fillets",
-          "Nisi ipsum aute non laborum consequat.",
+          "Mild and flaky white fish fillets, perfect for baking or pan-frying.",
           categories[1],
           3,
           0.5,
@@ -344,7 +344,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Jumbo King Prawns",
-          "Nisi ipsum aute non laborum consequat.",
+          "Jumbo-sized and succulent king prawns, ideal for grilling or stir-frying.",
           categories[1],
           7,
           0.15,
@@ -355,7 +355,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Lightly Dusted Haddock Fillets",
-          "Nisi ipsum aute non laborum consequat.",
+          "Lightly dusted and crispy haddock fillets, perfect for baking or pan-frying.",
           categories[1],
           3.75,
           0.255,
@@ -366,7 +366,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Tuna",
-          "Nisi ipsum aute non laborum consequat.",
+          "Flavorful and meaty tuna, ideal for grilling or baking.",
           categories[1],
           11.99,
           1,
@@ -377,7 +377,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Sole",
-          "Nisi ipsum aute non laborum consequat.",
+          "Delicate and flaky sole, perfect for pan-frying or baking.",
           categories[1],
           4.8,
           0.265,
@@ -388,7 +388,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Sardines in Sunflower Oil",
-          "Nisi ipsum aute non laborum consequat.",
+          "Savory and slightly smoky sardines in sunflower oil, great for snacking or on sandwiches.",
           categories[1],
           0.5,
           0.12,
@@ -399,7 +399,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Trout fillets",
-          "Nisi ipsum aute non laborum consequat.",
+          "Nutty and flavorful trout fillets, ideal for grilling or pan-frying.",
           categories[1],
           0.51,
           0.24,
@@ -410,7 +410,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Smoked Haddock Fillets",
-          "Nisi ipsum aute non laborum consequat.",
+          "Smoky and rich smoked haddock fillets, perfect for baking or poaching.",
           categories[1],
           4,
           0.4,
@@ -421,7 +421,7 @@ function createItemsFish(cb) {
       function (callback) {
         itemCreate(
           "Scottish Mackerel",
-          "Nisi ipsum aute non laborum consequat.",
+          "Flavorful and oily Scottish mackerel, great for grilling or baking.",
           categories[1],
           0.85,
           0.1,
@@ -440,7 +440,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Bread With Ham",
-          "Nisi ipsum aute non laborum consequat.",
+          "Delicious and savory bread with ham, perfect for sandwiches or toasting.",
           categories[2],
           1.1,
           1,
@@ -451,7 +451,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Milk Bread",
-          "Nisi ipsum aute non laborum consequat.",
+          "Soft and fluffy milk bread, great for toast or sandwiches.",
           categories[2],
           7.5,
           1,
@@ -462,7 +462,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Sliced Bread",
-          "Nisi ipsum aute non laborum consequat.",
+          "Convenient and versatile sliced bread, ideal for sandwiches or toast.",
           categories[2],
           2.4,
           0.8,
@@ -473,7 +473,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Cinnamon Rolls",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and spicy cinnamon rolls, perfect for breakfast or snacking.",
           categories[2],
           2.7,
           1,
@@ -484,7 +484,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Chocolate Muffins",
-          "Nisi ipsum aute non laborum consequat.",
+          "Decadent and chocolatey muffins, great for breakfast or snacking.",
           categories[2],
           0.5,
           1,
@@ -495,7 +495,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Blueberry Muffins",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and fruity blueberry muffins, perfect for breakfast or snacking.",
           categories[2],
           0.6,
           1,
@@ -506,7 +506,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Croissants",
-          "Nisi ipsum aute non laborum consequat.",
+          "Flaky and buttery croissants, ideal for breakfast or snacking.",
           categories[2],
           2.1,
           4,
@@ -517,7 +517,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Chocolate Chip Cookies",
-          "Nisi ipsum aute non laborum consequat.",
+          "Chewy and chocolatey chocolate chip cookies, great for snacking or dessert.",
           categories[2],
           3,
           0.4,
@@ -528,7 +528,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Apple Pie",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and flaky apple pie, perfect for dessert or snacking.",
           categories[2],
           3.85,
           0.55,
@@ -539,7 +539,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Raisin Bread",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and fruity raisin bread, great for toast or sandwiches.",
           categories[2],
           2.15,
           5,
@@ -550,7 +550,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Banana Bread",
-          "Nisi ipsum aute non laborum consequat.",
+          "Moist and banana-flavored banana bread, perfect for breakfast or snacking.",
           categories[2],
           3,
           0.25,
@@ -561,7 +561,7 @@ function createItemsBakery(cb) {
       function (callback) {
         itemCreate(
           "Doughnut",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and fried doughnut, ideal for breakfast or snacking.",
           categories[2],
           1.25,
           1,
@@ -580,7 +580,7 @@ function createItemsWater(cb) {
     [
       function (callback) {
         itemCreate(
-          "Water 6 x 1,5 Litre",
+          "Convenient and hydrating water, available in 6 x 1.5-liter bottles.",
           "Nisi ipsum aute non laborum consequat.",
           categories[3],
           4,
@@ -592,7 +592,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Water 5 Litre",
-          "Nisi ipsum aute non laborum consequat.",
+          "Large 5-liter bottle of water.",
           categories[3],
           2,
           5,
@@ -603,7 +603,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Strawberry Flavoured Water 6 x 0,3 Litre",
-          "Nisi ipsum aute non laborum consequat.",
+          "Refreshing 6 pack of 0.3-liter strawberry flavored water.",
           categories[3],
           3,
           1.8,
@@ -614,7 +614,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Orange Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and tangy orange juice, perfect for breakfast or snacking.",
           categories[3],
           2.5,
           1,
@@ -625,7 +625,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Apple Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Crisp and refreshing apple juice, ideal for breakfast or snacking.",
           categories[3],
           3,
           1.35,
@@ -636,7 +636,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Soda 6 x 0,3",
-          "Nisi ipsum aute non laborum consequat.",
+          "Variety pack of 6 cans of soda in 0.3 liters.",
           categories[3],
           2.5,
           1.8,
@@ -647,7 +647,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Iced Tea",
-          "Nisi ipsum aute non laborum consequat.",
+          "Refreshing and flavorful iced tea, great for warm weather.",
           categories[3],
           1.25,
           0.1,
@@ -658,7 +658,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Energy Drink 6 x 0,3",
-          "Nisi ipsum aute non laborum consequat.",
+          "Energizing 6 pack of 0.3-liter energy drinks.",
           categories[3],
           2.5,
           1.3,
@@ -669,7 +669,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Cranberry Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Tart and slightly sweet cranberry juice, great for cocktails or snacking.",
           categories[3],
           1,
           1,
@@ -680,7 +680,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Pineapple Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and tropical pineapple juice, perfect for breakfast or cocktails.",
           categories[3],
           1.3,
           1,
@@ -691,7 +691,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Grape Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and fruity grape juice, great for breakfast or snacking.",
           categories[3],
           1.6,
           1,
@@ -702,7 +702,7 @@ function createItemsWater(cb) {
       function (callback) {
         itemCreate(
           "Mango Juice",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet and juicy mango juice, perfect for breakfast or snacking",
           categories[3],
           1.4,
           1.5,
@@ -721,7 +721,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Sauvignon Blanc",
-          "Nisi ipsum aute non laborum consequat.",
+          "A white wine variety known for its crisp and refreshing taste, often with notes of citrus and green apple. Usually served with seafood, salads or light summer fare.",
           categories[4],
           10,
           0.75,
@@ -732,7 +732,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Marseile Red Wine",
-          "Nisi ipsum aute non laborum consequat.",
+          "A bold and full-bodied red wine that is typically made from a blend of red grape varieties grown in the Marseille region of France. Best paired with meat-based dishes.",
           categories[4],
           9,
           0.75,
@@ -743,7 +743,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Rose Wine",
-          "Nisi ipsum aute non laborum consequat.",
+          "A light and refreshing wine that is typically made from a blend of red and white grapes. It has a light, crisp and fruity taste, often with notes of strawberry and watermelon. Ideal for summer or lighter fare.",
           categories[4],
           5,
           0.75,
@@ -754,7 +754,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Italico Red Wine",
-          "Nisi ipsum aute non laborum consequat.",
+          "A bold and robust red wine that is typically made from Italian grape varieties grown in the Italico region. Ideal for hearty meals and strong flavors.",
           categories[4],
           3,
           1,
@@ -765,7 +765,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Island White Wine",
-          "Nisi ipsum aute non laborum consequat.",
+          "A light and crisp white wine made from grapes grown on islands, known for its bright, citrusy flavor and minerality. Best paired with seafood or salads.",
           categories[4],
           5,
           0.75,
@@ -776,7 +776,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Prestige Red Wine",
-          "Nisi ipsum aute non laborum consequat.",
+          "A rich and full-bodied wine, often made from a blend of premium red grape varieties. Ideal for special occasions or to impress guests.",
           categories[4],
           4,
           0.75,
@@ -787,7 +787,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Budweiser",
-          "Nisi ipsum aute non laborum consequat.",
+          "A classic American lager beer that is known for its smooth and refreshing taste. Budweiser is one of the largest and most widely recognized beer brands in the world.",
           categories[4],
           2.2,
           0.66,
@@ -798,7 +798,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Heineken",
-          "Nisi ipsum aute non laborum consequat.",
+          "A popular Dutch lager beer that is known for its mild and hoppy taste. Heineken is widely available in many countries and is a popular choice for casual drinkers.",
           categories[4],
           2.4,
           0.65,
@@ -809,7 +809,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Pilsner Urquell",
-          "Nisi ipsum aute non laborum consequat.",
+          "A Czech pilsner beer that is known for its crisp and refreshing taste. Pilsner Urquell is considered to be the original pilsner beer and has been brewed in the Czech Republic since the 19th century.",
           categories[4],
           1.1,
           0.33,
@@ -820,7 +820,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Stella Artois",
-          "Nisi ipsum aute non laborum consequat.",
+          "A Belgian pilsner beer that is known for its crisp and slightly bitter taste. Stella Artois is widely available in many countries and is a popular choice for casual drinkers.",
           categories[4],
           1.1,
           0.62,
@@ -831,7 +831,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Corona Extra",
-          "Nisi ipsum aute non laborum consequat.",
+          "A Mexican lager beer that is known for its light and crisp taste. Corona Extra is often served with a wedge of lime and is a popular choice for warm weather or beach-themed occasions.",
           categories[4],
           0.9,
           0.33,
@@ -842,7 +842,7 @@ function createItemsWine(cb) {
       function (callback) {
         itemCreate(
           "Guinness Stout",
-          "Nisi ipsum aute non laborum consequat.",
+          "A dark and creamy Irish stout beer that is known for its rich and smooth taste. Guinness is one of the world's most famous stout beers and is widely recognized for its iconic black and white label.",
           categories[4],
           3.35,
           0.6,
@@ -861,7 +861,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Carrot",
-          "Nisi ipsum aute non laborum consequat.",
+          "Fresh, crisp and sweet, a staple in many recipes.",
           categories[5],
           4,
           1,
@@ -872,7 +872,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Cauliflower",
-          "Nisi ipsum aute non laborum consequat.",
+          "A versatile, cruciferous vegetable that's low in calories and high in nutrients.",
           categories[5],
           0.95,
           1,
@@ -883,7 +883,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Leeks",
-          "Nisi ipsum aute non laborum consequat.",
+          "A mild-flavored onion that's great for soups, stews and sauces.",
           categories[5],
           1.19,
           0.5,
@@ -894,7 +894,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Large Potatoes",
-          "Nisi ipsum aute non laborum consequat.",
+          "A staple in many kitchens, good for roasting, mashing and more.",
           categories[5],
           0.8,
           1,
@@ -905,7 +905,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Red Potatoes",
-          "Nisi ipsum aute non laborum consequat.",
+          "Waxy skin and flesh, great for boiling and making salads.",
           categories[5],
           2.3,
           2,
@@ -916,7 +916,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Brown Onions",
-          "Nisi ipsum aute non laborum consequat.",
+          "A staple ingredient in many recipes, adds depth and flavor to dishes.",
           categories[5],
           0.15,
           1,
@@ -927,7 +927,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Tomatoes",
-          "Nisi ipsum aute non laborum consequat.",
+          "Perfectly ripe, juicy and sweet, adds a pop of color to any meal.",
           categories[5],
           1.75,
           1,
@@ -938,7 +938,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Iceberg Lettuce",
-          "Nisi ipsum aute non laborum consequat.",
+          "Crisp, refreshing, and low calorie, great for salads or sandwiches.",
           categories[5],
           0.65,
           1,
@@ -949,7 +949,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Red Pepper",
-          "Nisi ipsum aute non laborum consequat.",
+          "Sweet, juicy, and full of vitamin C, great for grilling or roasting.",
           categories[5],
           0.5,
           1,
@@ -960,7 +960,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Brocoli",
-          "Nisi ipsum aute non laborum consequat.",
+          "A nutrient-packed, cruciferous vegetable that's low in calories and high in fiber.",
           categories[5],
           0.69,
           1,
@@ -971,7 +971,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Spinach",
-          "Nisi ipsum aute non laborum consequat.",
+          "A dark, leafy green that's packed with vitamins and minerals, great for salads or smoothies.",
           categories[5],
           1,
           1,
@@ -982,7 +982,7 @@ function createItemsVegetables(cb) {
       function (callback) {
         itemCreate(
           "Sweet Potatoes",
-          "Nisi ipsum aute non laborum consequat.",
+          "A starchy root vegetable, great for roasting or mashing, high in fiber and vitamins.",
           categories[5],
           1.35,
           1,

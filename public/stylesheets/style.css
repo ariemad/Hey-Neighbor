@@ -274,11 +274,16 @@ footer {
 
 .item-main {
   padding-left: 3rem;
+  padding-right: 3rem;
   padding-bottom: 5rem;
 }
 
 .item-main h3 {
   margin: 2rem 0 1rem;
+}
+
+.item-main p {
+  line-height: 1.1;
 }
 
 .item-image {

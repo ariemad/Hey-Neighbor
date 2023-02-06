@@ -1,3 +1,4 @@
+require("dotenv").config();
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -14,8 +15,7 @@ var app = express();
 const mongoose = require("mongoose");
 
 // Set up default mongoose connection
-const mongoDB =
-  "mongodb+srv://admin:admin12345@mongodbtutorial.vejdiqq.mongodb.net/HeyNeighbor?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGO_KEY;
 mongoose.set("strictQuery", false);
 mongoose.connect(
   mongoDB,
