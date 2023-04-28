@@ -34,7 +34,11 @@ exports.itemDetail = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      res.render("itemDetail", { item: data, items: req.body.samples });
+      res.render("itemDetail", {
+        title: data.name,
+        item: data,
+        items: req.body.samples,
+      });
     });
 };
 

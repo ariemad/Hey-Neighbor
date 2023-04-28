@@ -8,7 +8,11 @@ exports.categoryCatalog = async (req, res, next) => {
     .sort({ name: 1 })
     .catch((err) => next(err));
 
-  res.render("index", { categories: data, items: req.body.samples });
+  res.render("index", {
+    title: "Hey Neighbor",
+    categories: data,
+    items: req.body.samples,
+  });
 };
 
 exports.categoryDetail = async (req, res, next) => {
