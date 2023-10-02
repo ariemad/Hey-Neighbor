@@ -7,4 +7,4 @@ check host heyneighbor.shop with address heyneighbor.shop
    then alert
 
 check process heyNeighborNextApp with pidfile /home/ubuntu/Hey-Neighbor/pidfile.pid
-  if does not exist then alerts
+  if does not exist then alert
