@@ -1,0 +1,10 @@
+check host heyneighbor.shop with address heyneighbor.shop
+   if failed
+    port 443 # Specify the port you want to monitor
+    protocol https # Specify the protocol (https or http)
+    and request "/"
+    with timeout 10 seconds
+   then alert
+
+check process heyNeighborNextApp with pidfile /home/ubuntu/Hey-Neighbor/pidfile.pid
+  if does not exist then alerts
