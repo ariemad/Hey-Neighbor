@@ -61,3 +61,11 @@
 .no-margin-top {
   margin-top: 0;
 }
+
+.left {
+  padding-left: auto;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
